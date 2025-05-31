@@ -1,0 +1,29 @@
+APPLICATON STRUCTURE
+
+|--config.json
+|--requirement.txt
+|--src
+|  |--__init__.py
+|  |--static
+|  |  |--css
+|  |  |  |--main.css
+|  |  |--img
+|  |  |  |--header.png
+|  |  |--js
+|  |  |  |--site.js
+|  |
+|  |--templates
+|  |  |--about.html
+|  |  |--index.html  
+|
+|--test
+|  |--test_auth.py
+|  |--test_site.py
+|
+|--.venv
+
+CREATE A PYTHON VIRTUAL ENVIRONMENT
+1 - cd into the project root 
+2 - run python -m venv .venv to create python execution code 
+
+To active the environment, run .venv\Scripts\activate

@@ -1,0 +1,31 @@
+cd Solution.MyFuncApp
+-- Create a python virtual environment
+python -m venv .venv 
+
+3) Active the environment
+
+.venv\Scripts\activate
+
+Or:
+source .venv\Scripts\activate if the above does not active the virtual environment
+
+4) Install dependencies:
+
+pip install -r requirements.txt
+
+Find and kill process blocking Azure function: 
+Find netstat -ano | findstr 7071 (Returns LISTENING       34456 -- port)
+Go to Task Manager, find 34456 => End task
+
+How to switch python kernel to your local project:
+By default, vs code will use the global python environment to run the project, which results in dependencies might not be resolved because the packages are not installed globally.
+
+To use a local kernel: 
+1) Activate the python environment:
+
+ .venv\Scripts\activate
+
+2) pip install ipykernel
+
+3) Register virtual environment as Jupyter Kernel:
+python -m ipykernel install --user --name=your-venv-name
